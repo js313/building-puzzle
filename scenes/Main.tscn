@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://50u3ajsw1bv7"]
+
+[ext_resource type="Script" uid="uid://cw752dvda6b1t" path="res://scenes/Main.cs" id="1_elqb8"]
+[ext_resource type="TileSet" uid="uid://dgavjdyy8kakl" path="res://resources/highlight_tileset.tres" id="2_rvslj"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_elqb8"]
+size = Vector2(64, 64)
+
+[node name="Main" type="Node"]
+script = ExtResource("1_elqb8")
+
+[node name="HighlightTileMapLayer" type="TileMapLayer" parent="."]
+modulate = Color(1, 1, 1, 0.490196)
+tile_set = ExtResource("2_rvslj")
+
+[node name="Cursor" type="Sprite2D" parent="."]
+texture = SubResource("PlaceholderTexture2D_elqb8")
+centered = false
+
+[node name="PlaceBuildingButton" type="Button" parent="."]
+offset_top = 689.0
+offset_right = 117.0
+offset_bottom = 720.0
+text = "Place Building"
